@@ -1,12 +1,9 @@
-// Inicialização do AOS
 AOS.init({
     duration: 800,
     once: true,
     offset: 50,
     easing: 'ease-out-cubic'
 });
-
-// Configuração do Particles.js
 particlesJS('particles-js', {
     particles: {
         number: {
@@ -110,7 +107,6 @@ particlesJS('particles-js', {
     retina_detect: true
 });
 
-// Loading Screen
 window.addEventListener('load', function() {
     let percentage = 0;
     const loadingPercentage = document.getElementById('loading-percentage');
@@ -133,7 +129,6 @@ window.addEventListener('load', function() {
     }, 100);
 });
 
-// Menu Mobile
 const menuIcon = document.querySelector('.menu-icon');
 const closeIcon = document.querySelector('.close-icon');
 const menu = document.querySelector('.menu-navegacao');
@@ -156,7 +151,6 @@ menuLinks.forEach(link => {
     });
 });
 
-// Smooth Scroll para links de navegação
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -170,7 +164,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Header Background on Scroll
 window.addEventListener('scroll', () => {
     const header = document.querySelector('.header');
     if (window.scrollY > 100) {
@@ -180,7 +173,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Animação de texto
 const textElement = document.querySelector('.texto-animado');
 const texts = ['Full Stack', 'Front-end', 'Back-end', 'Web'];
 let textIndex = 0;
@@ -212,10 +204,8 @@ function typeWriter() {
     setTimeout(typeWriter, typeSpeed);
 }
 
-// Iniciar animação de texto
 typeWriter();
 
-// Animação das barras de habilidade
 const observerOptions = {
     threshold: 0.5,
     rootMargin: '0px 0px -100px 0px'
@@ -240,7 +230,6 @@ if (skillsSection) {
     skillsObserver.observe(skillsSection);
 }
 
-// Back to Top Button
 const backToTopButton = document.getElementById('back-to-top');
 
 window.addEventListener('scroll', () => {
@@ -258,7 +247,6 @@ backToTopButton.addEventListener('click', () => {
     });
 });
 
-// Navegação ativa
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-desktop a, .lista-navegacao a');
 
@@ -280,10 +268,8 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// EmailJS Configuration
-emailjs.init("YOUR_PUBLIC_KEY"); // Substitua pela sua chave pública do EmailJS
+emailjs.init("YOUR_PUBLIC_KEY"); // Substitua pela sua chave pública do EmailJS mas eu n tenho ainda
 
-// Contact Form
 const contactForm = document.getElementById('contact-form');
 const successMessage = document.getElementById('form-success');
 
@@ -293,7 +279,6 @@ contactForm.addEventListener('submit', function(e) {
     const submitButton = contactForm.querySelector('button[type="submit"]');
     const originalText = submitButton.innerHTML;
     
-    // Mostrar loading
     submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
     submitButton.disabled = true;
     
@@ -316,7 +301,6 @@ contactForm.addEventListener('submit', function(e) {
         });
 });
 
-// Máscara para telefone
 const phoneInput = document.querySelector('input[name="user_phone"]');
 if (phoneInput) {
     phoneInput.addEventListener('input', function(e) {
@@ -326,7 +310,6 @@ if (phoneInput) {
     });
 }
 
-// Parallax effect para algumas seções
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const parallaxElements = document.querySelectorAll('.parallax');
@@ -338,7 +321,6 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Lazy loading para imagens
 const images = document.querySelectorAll('img[data-src]');
 const imageObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
@@ -353,7 +335,6 @@ const imageObserver = new IntersectionObserver((entries, observer) => {
 
 images.forEach(img => imageObserver.observe(img));
 
-// Prevenção de spam no formulário
 let formSubmitted = false;
 contactForm.addEventListener('submit', function(e) {
     if (formSubmitted) {
@@ -367,25 +348,21 @@ contactForm.addEventListener('submit', function(e) {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Adicionar classe floating a alguns elementos
     const floatingElements = document.querySelectorAll('.skill-card img, .certificate-image img');
     floatingElements.forEach((element, index) => {
         element.style.animationDelay = `${index * 0.2}s`;
         element.classList.add('floating');
     });
     
-    // Animação de entrada para os cards de projeto
     const projectCards = document.querySelectorAll('.project-card');
     projectCards.forEach((card, index) => {
         card.style.animationDelay = `${index * 0.1}s`;
     });
     
-    // Inicializar texto animado
     setTimeout(() => {
         typeWriter();
     }, 1000);
     
-    // Melhorar responsividade das imagens dos certificados
     const certificateImages = document.querySelectorAll('.certificate-image img');
     certificateImages.forEach(img => {
         img.addEventListener('load', function() {
@@ -403,8 +380,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
-// Adicionar CSS para animação de piscar do cursor
 const style = document.createElement('style');
 style.textContent = `
     @keyframes blink {

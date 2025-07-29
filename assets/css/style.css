@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
-/* Reset e configurações básicas */
 * {
     margin: 0;
     padding: 0;
@@ -46,7 +45,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Scrollbar personalizada */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -64,7 +62,6 @@ body {
     background: #0056B3;
 }
 
-/* Loading Screen */
 #loading-screen {
     position: fixed;
     top: 0;
@@ -91,14 +88,12 @@ body {
     50% { opacity: 0.5; }
 }
 
-/* Container */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Header */
 .header {
     position: fixed;
     top: 0;
@@ -136,7 +131,6 @@ body {
     color: var(--primary-color);
 }
 
-/* Navigation Desktop */
 .nav-desktop {
     display: none;
 }
@@ -163,7 +157,6 @@ body {
     background: rgba(0, 123, 255, 0.1);
 }
 
-/* Mobile Menu */
 .menu-icon {
     font-size: 1.5rem;
     cursor: pointer;
@@ -228,7 +221,6 @@ body {
     color: var(--primary-color);
 }
 
-/* Buttons */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -266,7 +258,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* Section Styles */
 section {
     padding: 6rem 0;
     position: relative;
@@ -294,7 +285,6 @@ section {
     margin-bottom: 1rem;
 }
 
-/* Home Section */
 .home {
     min-height: 100vh;
     display: flex;
@@ -556,12 +546,10 @@ section {
     }
 }
 
-/* Animação flutuante para elementos */
 .floating {
     animation: float 3s ease-in-out infinite;
 }
 
-/* About Section */
 .about {
     background: var(--gray-900);
 }
@@ -659,7 +647,6 @@ section {
     transform: scale(1.05);
 }
 
-/* Skills Section */
 .skills-content {
     text-align: center;
 }
@@ -932,7 +919,6 @@ section {
     color: var(--light-color);
 }
 
-/* Contact Section */
 .contact {
     background: var(--gray-900);
 }
@@ -1018,7 +1004,6 @@ section {
     transform: translateY(-3px);
 }
 
-/* Contact Form */
 .contact-form {
     background: var(--dark-color);
     padding: 2rem;
@@ -1065,7 +1050,6 @@ section {
     border: 1px solid var(--accent-color);
 }
 
-/* Footer */
 .footer {
     background: var(--dark-color);
     padding: 2rem 0;
@@ -1103,7 +1087,6 @@ section {
     color: var(--primary-color);
 }
 
-/* Back to Top Button */
 .back-to-top {
     position: fixed;
     bottom: 2rem;
@@ -1132,7 +1115,6 @@ section {
     box-shadow: var(--shadow-lg);
 }
 
-/* Responsive Design */
 @media (min-width: 768px) {
     .nav-desktop {
         display: block;
